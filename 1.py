@@ -1,14 +1,11 @@
-n = 0
-numbers = []
-new_list = []
-while n < 10:
-    numbers.append(int(input()))
-    n += 1
+numbers = list(map(int, input().split()))
 
-for i in range(len(numbers)-2):
-    new_list.append(numbers[i] + numbers[i+1] + numbers[i+2])
+new_list = []
+
+for i in range(1, 9):
+    new_list.append(numbers[i-1] + numbers[i+1])
 
 print(new_list)
-    
+
 
 
